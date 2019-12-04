@@ -1,5 +1,4 @@
 # Crystal Collectors
-<<<<<<< HEAD
 ![GitHub language count](https://img.shields.io/github/languages/count/beckygold/CrystalCollectors)
 ![GitHub top language](https://img.shields.io/github/languages/top/beckygold/CrystalCollectors)
 ![GitHub](https://img.shields.io/github/license/beckygold/CrystalCollectors)
@@ -27,9 +26,3 @@ Go past the target score and you lose.
 
 ## License
 MIT License
-=======
-This app utilizes HTML, CSS, JavaScript and jQuery and was built with the Bootstrap CSS framework. Crystal images were created by me.<br>
-Description:<br>
-A web game where the player must add up crystals in order to match the random number generated at the beginning of the game. Each crystal has a randomly assigned hidden value ranging from 1-12. If the player goes past the random number when adding their crystals, they lose. 
-
->>>>>>> d8e81ba50795a343a9d0a2330ca82c278f928866
