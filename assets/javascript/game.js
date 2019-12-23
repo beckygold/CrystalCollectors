@@ -17,9 +17,9 @@ var totalScoreText = document.getElementById("totalscore-text");
 // the computer picks a random number between 19 - 120 and 
 function start() {
     var targetNumber = Math.floor(Math.random() * (120 - 19) + 19);
-    console.log("Number: " + targetNumber);
+    console.log("Target Number: " + targetNumber);
     // targetNumberText.textContent = "Target Number: " + targetNumber.value;
-    $("#targetNumberText").html(targetNumber);
+    $("#targetNumberText").text(`Target Number: ${targetNumber}`);
     
 // each crystal is set to a random hidden value between 1 - 12
     var crystalBlue = Math.floor(Math.random() * (12 - 1) + 1);
@@ -35,10 +35,13 @@ function start() {
 start()
 
 // when crystal is clicked, add the hidden value to the player's total score
-$("#crystalBlue").click(function() {
-    totalScore.value += crystalBlue;
+$("#crystal-blue").click(function() {
+    console.log("You clicked the Blue Crystal");
+    // totalScore.value += crystalBlue.value;
+    totalScore += crystalBlue;
     $('#totalScoreText').html(totalScore);
 });
+
 // player wins if total score = random number
 
 // player loses if total score > random number
