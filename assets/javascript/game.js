@@ -9,17 +9,17 @@ var crystalGreen = " ";
 var crystalRed = " ";
 var crystalYellow = " ";
 
-var targetNumberText = document.getElementById("targetnumber-text");
-var winsText = document.getElementById("wins-text");
-var lossesText = document.getElementById("losses-text");
-var totalScoreText = document.getElementById("totalscore-text");
+// Putting HTML elements into variables
+var targetNumberText = $("#targetnumber-text");
+var winsText = $("#wins-text");
+var lossesText = $("#losses-text");
+var totalScoreText = $("#totalscore-text");
 
 // the computer picks a random number between 19 - 120 and 
 function start() {
     var targetNumber = Math.floor(Math.random() * (120 - 19) + 19);
     console.log("Target Number: " + targetNumber);
-    // targetNumberText.textContent = "Target Number: " + targetNumber.value;
-    $("#targetNumberText").text(`Target Number: ${targetNumber}`);
+    targetNumberText.text(`Target Number: ${targetNumber}`);
     
 // each crystal is set to a random hidden value between 1 - 12
     var crystalBlue = Math.floor(Math.random() * (12 - 1) + 1);
