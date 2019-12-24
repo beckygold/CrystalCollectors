@@ -1,7 +1,16 @@
-body {
+.jumbotron {
     background-image: url("../images/abstract-art-artistic-260286.jpg");
     background-color: #ffcc00;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     color: #f2f2f2;
+}
+
+#start-div {
+    display: initial;
+}
+
+#play-div {
+    display: none;
+}
