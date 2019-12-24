@@ -24,7 +24,6 @@ Go past the target score and you lose.
 
 ## Future Developments
 * Polish front-end.
-* Complete game functionality.
 
 ## License
 MIT License
