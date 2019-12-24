@@ -40,39 +40,89 @@ $("#crystal-blue").click(function() {
     totalScore += crystalBlue;
     totalScoreText.text(`Your total score is: ${totalScore}`);
     actionText.text("You clicked the Blue Crystal!");
+    // player wins if total score = random number
+    if (totalScore === targetNumber) {
+        wins++;
+        actionText.text("You win!");
+        winsText.text(`Wins: ${wins}`);
+        // restart game
+        start();
+    } 
+    // player loses if total score > random number
+    else if (totalScore > targetNumber) {
+        losses++;
+        actionText.text("You lost!");
+        lossesText.text(`Losses: ${losses}`);
+        // restart game
+        start();
+    };
 });
 
 $("#crystal-green").click(function() {
     console.log("You clicked the Green Crystal");
     totalScore += crystalGreen;
     totalScoreText.text(`Your total score is: ${totalScore}`);
-    actionText.empty();
     actionText.text("You clicked the Green Crystal!");
+    // player wins if total score = random number
+    if (totalScore === targetNumber) {
+        wins++;
+        actionText.text("You win!");
+        winsText.text(`Wins: ${wins}`);
+        // restart game
+        start();
+    } 
+    // player loses if total score > random number
+    else if (totalScore > targetNumber) {
+        losses++;
+        actionText.text("You lost!");
+        lossesText.text(`Losses: ${losses}`);
+        // restart game
+        start();
+    };
 });
 
 $("#crystal-red").click(function() {
     console.log("You clicked the Red Crystal");
     totalScore += crystalRed;
     totalScoreText.text(`Your total score is: ${totalScore}`);
-    actionText.empty();
     actionText.text("You clicked the Red Crystal!");
+    // player wins if total score = random number
+    if (totalScore === targetNumber) {
+        wins++;
+        actionText.text("You win!");
+        winsText.text(`Wins: ${wins}`);
+        // restart game
+        start();
+    } 
+    // player loses if total score > random number
+    else if (totalScore > targetNumber) {
+        losses++;
+        actionText.text("You lost!");
+        lossesText.text(`Losses: ${losses}`);
+        // restart game
+        start();
+    };
 });
 
 $("#crystal-yellow").click(function() {
     console.log("You clicked the Yellow Crystal");
     totalScore += crystalYellow;
     totalScoreText.text(`Your total score is: ${totalScore}`);
-    actionText.empty();
     actionText.text("You clicked the Yellow Crystal!");
-});
-
-// player wins if total score = random number
-if (totalScore === targetNumber) {
+    // player wins if total score = random number
+    if (totalScore === targetNumber) {
         wins++;
         actionText.text("You win!");
         winsText.text(`Wins: ${wins}`);
-    }
-
-// player loses if total score > random number
-
-// game restarts whenever player wins / loses. page does not refresh.
+        // restart game
+        start();
+    } 
+    // player loses if total score > random number
+    else if (totalScore > targetNumber) {
+        losses++;
+        actionText.text("You lost!");
+        lossesText.text(`Losses: ${losses}`);
+        // restart game
+        start();
+    };
+});
