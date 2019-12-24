@@ -39,7 +39,6 @@ start()
 $("#crystal-blue").click(function() {
     totalScore += crystalBlue;
     totalScoreText.text(`Your total score is: ${totalScore}`);
-    actionText.empty();
     actionText.text("You clicked the Blue Crystal!");
 });
 
@@ -68,12 +67,12 @@ $("#crystal-yellow").click(function() {
 });
 
 // player wins if total score = random number
-// if (totalScore = targetNumber) {
-//     wins++;
-//     actionText.empty();
-//     actionText.text("You win!");
-//     winsText.text(`Wins: ${wins}`);
-// }
+if (totalScore === targetNumber) {
+        wins++;
+        actionText.text("You win!");
+        winsText.text(`Wins: ${wins}`);
+    }
+
 // player loses if total score > random number
 
 // game restarts whenever player wins / loses. page does not refresh.
