@@ -15,14 +15,17 @@ var winsText = $("#wins-text");
 var lossesText = $("#losses-text");
 var totalScoreText = $("#totalscore-text");
 var actionText = $("#action-text");
+var startBtn = $("#start-button");
+var startDiv = $("#start-div");
+var playDiv = $("#play-div");
 
 // the computer picks a random number between 19 - 120 and 
 function start() {
     targetNumber = Math.floor(Math.random() * (120 - 19) + 19);
     console.log("Target Number: " + targetNumber);
     targetNumberText.text(`Target Number: ${targetNumber}`);
-    
-// each crystal is set to a random hidden value between 1 - 12
+
+    // each crystal is set to a random hidden value between 1 - 12
     crystalBlue = Math.floor(Math.random() * (12 - 1) + 1);
     console.log("Blue: " + crystalBlue);
     crystalGreen = Math.floor(Math.random() * (12 - 1) + 1);
@@ -35,8 +38,14 @@ function start() {
 
 start()
 
+// when the start button is clicked, display the game view
+startBtn.click(function () {
+    startDiv.css({ "display": "none" });
+    playDiv.css({ "display": "initial" });
+});
+
 // when crystal is clicked, add the hidden value to the player's total score
-$("#crystal-blue").click(function() {
+$("#crystal-blue").click(function () {
     totalScore += crystalBlue;
     totalScoreText.text(`Your total score is: ${totalScore}`);
     actionText.text("You clicked the Blue Crystal!");
@@ -47,7 +56,7 @@ $("#crystal-blue").click(function() {
         winsText.text(`Wins: ${wins}`);
         // restart game
         start();
-    } 
+    }
     // player loses if total score > random number
     else if (totalScore > targetNumber) {
         losses++;
@@ -58,7 +67,7 @@ $("#crystal-blue").click(function() {
     };
 });
 
-$("#crystal-green").click(function() {
+$("#crystal-green").click(function () {
     console.log("You clicked the Green Crystal");
     totalScore += crystalGreen;
     totalScoreText.text(`Your total score is: ${totalScore}`);
@@ -70,7 +79,7 @@ $("#crystal-green").click(function() {
         winsText.text(`Wins: ${wins}`);
         // restart game
         start();
-    } 
+    }
     // player loses if total score > random number
     else if (totalScore > targetNumber) {
         losses++;
@@ -81,7 +90,7 @@ $("#crystal-green").click(function() {
     };
 });
 
-$("#crystal-red").click(function() {
+$("#crystal-red").click(function () {
     console.log("You clicked the Red Crystal");
     totalScore += crystalRed;
     totalScoreText.text(`Your total score is: ${totalScore}`);
@@ -93,7 +102,7 @@ $("#crystal-red").click(function() {
         winsText.text(`Wins: ${wins}`);
         // restart game
         start();
-    } 
+    }
     // player loses if total score > random number
     else if (totalScore > targetNumber) {
         losses++;
@@ -104,7 +113,7 @@ $("#crystal-red").click(function() {
     };
 });
 
-$("#crystal-yellow").click(function() {
+$("#crystal-yellow").click(function () {
     console.log("You clicked the Yellow Crystal");
     totalScore += crystalYellow;
     totalScoreText.text(`Your total score is: ${totalScore}`);
@@ -116,7 +125,7 @@ $("#crystal-yellow").click(function() {
         winsText.text(`Wins: ${wins}`);
         // restart game
         start();
-    } 
+    }
     // player loses if total score > random number
     else if (totalScore > targetNumber) {
         losses++;
