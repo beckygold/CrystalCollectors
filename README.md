@@ -14,7 +14,7 @@ A web game where the player must add up crystals in order to match the random nu
 * Bootstrap
 
 ## Usage
-Navigate to the game by clicking [here](https://beckygold.github.io/CrystalCollectors/).
+Navigate to the game by clicking [here](https://rebeccagoldstein.github.io/CrystalCollectors/).
 
 Click on a crystal to add it's value to your score.
 
