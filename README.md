@@ -22,6 +22,8 @@ Try to get your score to match the target score to win!
 
 Go past the target score and you lose.
 
+![Example GIF](./assets/images/example.gif/)
+
 ## Future Developments
 * Polish front-end.
 
